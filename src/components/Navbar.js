@@ -29,7 +29,6 @@ const Navbar = () => {
         <ul className="nav-icons">
           {navIcons.map((icon) => {
             const { id, href, iconFab } = icon;
-
             return (
               <li key={id}>
                 <a
