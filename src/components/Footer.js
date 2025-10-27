@@ -1,21 +1,11 @@
-import { navLinks } from "../data";
 import { navIcons } from "../data";
+import PageLink from "./PageLinks";
 
 const Footer = () => {
   return (
     <footer className="section footer">
-      <ul className="footer-links">
-        {navLinks.map((link) => {
-          const { id, href, text } = link;
-          return (
-            <li key={id}>
-              <a href={href} className="footer-link">
-                {text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      <PageLink parentClassName="footer-links" childClassName="footer-link" />
+
       <ul className="footer-icons">
         {navIcons.map((icon) => {
           const { id, href, iconFab } = icon;
