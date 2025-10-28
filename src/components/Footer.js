@@ -1,20 +1,16 @@
 import { navIcons } from "../data";
-import PageLink from "./PageLinks";
+import PageLinks from "./PageLinks";
+import SotialLink from "./SotialLink";
 
 const Footer = () => {
   return (
     <footer className="section footer">
-      <PageLink parentClassName="footer-links" childClassName="footer-link" />
+      <PageLinks parentClassName="footer-links" childClassName="footer-link" />
 
       <ul className="footer-icons">
         {navIcons.map((icon) => {
-          const { id, href, iconFab } = icon;
           return (
-            <li key={id}>
-              <a href={href} target="_blank" className="footer-icon">
-                <i className={iconFab}></i>
-              </a>
-            </li>
+            <SotialLink key={icon.id} {...icon} itemClassName="footer-icon" />
           );
         })}
       </ul>
